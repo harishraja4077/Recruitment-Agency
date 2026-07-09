@@ -58,7 +58,7 @@
             <div class="dashboard-topbar reveal reveal-down">
                 <div style="display: flex; align-items: center; gap: 1rem;">
                     <!-- Responsive Nav Toggle -->
-                    <button class="btn btn-secondary btn-icon dashboard-nav-toggle" style="display: none; width: 40px; height: 40px; border-radius: 8px;" aria-label="Toggle Navigation">
+                    <button class="btn btn-secondary btn-icon dashboard-nav-toggle" aria-label="Toggle Navigation">
                         <i class="fas fa-bars"></i>
                     </button>
                     <div class="dashboard-welcome">
@@ -382,6 +382,9 @@
         
     </div>
 
+    <!-- Sidebar Overlay (closes sidebar on mobile tap outside) -->
+    <div class="sidebar-overlay" id="sidebar-overlay"></div>
+
     <!-- Scripts -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
@@ -394,20 +397,34 @@
 
             // Responsive Nav Toggle
             if (toggleBtn && sidebar) {
+                const overlay = document.getElementById('sidebar-overlay');
+
                 const checkViewport = () => {
                     if (window.innerWidth <= 991) {
                         toggleBtn.style.display = 'flex';
                     } else {
-                        toggleBtn.style.display = 'none';
+                        toggleBtn.style.display = '';
                         sidebar.classList.remove('active');
+                        if (overlay) overlay.style.display = 'none';
                     }
                 };
                 checkViewport();
                 window.addEventListener('resize', checkViewport);
                 
-                toggleBtn.addEventListener('click', () => {
+                toggleBtn.addEventListener('click', (e) => {
+                    e.stopPropagation();
                     sidebar.classList.toggle('active');
+                    if (overlay) {
+                        overlay.style.display = sidebar.classList.contains('active') ? 'block' : 'none';
+                    }
                 });
+
+                if (overlay) {
+                    overlay.addEventListener('click', () => {
+                        sidebar.classList.remove('active');
+                        overlay.style.display = 'none';
+                    });
+                }
             }
 
             // Tab Switching logic
@@ -423,6 +440,8 @@
                     // Close sidebar on mobile
                     if (window.innerWidth <= 991 && sidebar) {
                         sidebar.classList.remove('active');
+                        const overlay = document.getElementById('sidebar-overlay');
+                        if (overlay) overlay.style.display = 'none';
                     }
 
                     // Toggle visibility of sections

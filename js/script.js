@@ -19,27 +19,36 @@ document.addEventListener('DOMContentLoaded', () => {
     // ==========================================================================
     const mobileToggle = document.querySelector('.mobile-nav-toggle');
     const navMenu = document.querySelector('.nav-menu');
-    
+
+    const closeNavMenu = () => {
+        navMenu.classList.remove('active');
+        const icon = mobileToggle.querySelector('i');
+        if (icon) {
+            icon.classList.add('fa-bars');
+            icon.classList.remove('fa-times');
+        }
+    };
+
     if (mobileToggle && navMenu) {
-        mobileToggle.addEventListener('click', () => {
+        mobileToggle.addEventListener('click', (e) => {
+            e.stopPropagation();
             navMenu.classList.toggle('active');
-            // Toggle hamburger icon if fontawesome is used
             const icon = mobileToggle.querySelector('i');
             if (icon) {
                 icon.classList.toggle('fa-bars');
                 icon.classList.toggle('fa-times');
             }
         });
-        
+
+        // Close menu when clicking a nav link
+        navMenu.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', closeNavMenu);
+        });
+
         // Close menu when clicking outside
         document.addEventListener('click', (e) => {
             if (!mobileToggle.contains(e.target) && !navMenu.contains(e.target)) {
-                navMenu.classList.remove('active');
-                const icon = mobileToggle.querySelector('i');
-                if (icon) {
-                    icon.classList.add('fa-bars');
-                    icon.classList.remove('fa-times');
-                }
+                closeNavMenu();
             }
         });
     }
