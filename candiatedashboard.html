@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Manage your job applications, profile details, and bookmarked jobs on the Stackly Candidate Dashboard.">
+    <title>Candidate Dashboard - Stackly Recruiting Agency</title>
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="dashboard-layout">
+        
+        <!-- Sidebar Navigation -->
+        <aside class="dashboard-sidebar">
+            <div>
+                <a href="index.html" class="sidebar-logo">
+                    <img src="images/logo.webp" alt="Stackly Logo">
+                </a>
+                
+                <div class="sidebar-heading">Candidate Menu</div>
+                <nav class="sidebar-menu">
+                    <button class="sidebar-link active" data-section="dashboard">
+                        <i class="fas fa-chart-pie"></i> Dashboard
+                    </button>
+                    <button class="sidebar-link" data-section="my-profile">
+                        <i class="fas fa-user-circle"></i> My Profile
+                    </button>
+                    <button class="sidebar-link" data-section="find-jobs">
+                        <i class="fas fa-search-dollar"></i> Find Jobs
+                    </button>
+                    <button class="sidebar-link" data-section="my-applications">
+                        <i class="fas fa-file-invoice"></i> My Applications
+                    </button>
+                    <button class="sidebar-link" data-section="interviews">
+                        <i class="fas fa-calendar-check"></i> Interviews
+                    </button>
+                    <button class="sidebar-link" data-section="saved-jobs">
+                        <i class="fas fa-bookmark"></i> Saved Jobs
+                    </button>
+                </nav>
+            </div>
+            
+            <div class="sidebar-footer">
+                <a href="index.html" class="sidebar-link" style="color: #ef4444; text-decoration: none;">
+                    <i class="fas fa-sign-out-alt"></i> Logout
+                </a>
+            </div>
+        </aside>
+
+        <!-- Main Dashboard Panel -->
+        <main class="dashboard-main">
+            
+            <!-- Topbar Header -->
+            <div class="dashboard-topbar reveal reveal-down">
+                <div style="display: flex; align-items: center; gap: 1rem;">
+                    <!-- Responsive Nav Toggle -->
+                    <button class="btn btn-secondary btn-icon dashboard-nav-toggle" style="display: none; width: 40px; height: 40px; border-radius: 8px;" aria-label="Toggle Navigation">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <div class="dashboard-welcome">
+                        <h2 id="topbar-heading">Welcome Back, Jane!</h2>
+                        <p id="topbar-subheading" style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 0;">Here's what's happening with your job search today.</p>
+                    </div>
+                </div>
+                
+                <div class="dashboard-user-profile flex">
+                    <div class="action-btns" style="margin-right: 1rem;">
+                        <button class="btn-action-icon" aria-label="Notifications" style="position: relative;">
+                            <i class="far fa-bell"></i>
+                            <span style="position: absolute; top: -2px; right: -2px; width: 8px; height: 8px; background-color: #ef4444; border-radius: 50%;"></span>
+                        </button>
+                    </div>
+                    <div class="dashboard-user-info" style="text-align: right;">
+                        <h5 id="dashboard-user-email" style="text-transform: lowercase;">Jane Doe</h5>
+                        <p style="color: var(--text-muted); font-size: 0.75rem;">Candidate Account</p>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=100&auto=format&fit=crop" alt="Jane Doe Avatar">
+                </div>
+            </div>
+
+            <!-- ==========================================================================
+               SECTION: DASHBOARD OVERVIEW
+               ========================================================================== -->
+            <div id="section-dashboard" class="dashboard-section active-section">
+                <!-- Stats Grid Row -->
+                <div class="stats-card-grid">
+                    <div class="stat-card">
+                        <div>
+                            <div class="stat-card-value">12</div>
+                            <div class="stat-card-title">Applied Jobs</div>
+                        </div>
+                        <div class="stat-card-icon primary">
+                            <i class="fas fa-paper-plane"></i>
+                        </div>
+                    </div>
+                    <div class="stat-card-icon-container stat-card">
+                        <div>
+                            <div class="stat-card-value">4</div>
+                            <div class="stat-card-title">Interviews</div>
+                        </div>
+                        <div class="stat-card-icon warning">
+                            <i class="fas fa-video"></i>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div>
+                            <div class="stat-card-value">6</div>
+                            <div class="stat-card-title">Bookmarks</div>
+                        </div>
+                        <div class="stat-card-icon success">
+                            <i class="fas fa-bookmark"></i>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div>
+                            <div class="stat-card-value">32</div>
+                            <div class="stat-card-title">Profile Views</div>
+                        </div>
+                        <div class="stat-card-icon secondary">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid grid-2" style="grid-template-columns: 2fr 1fr; gap: 2rem; align-items: start;">
+                    <div class="grid" style="gap: 2rem;">
+                        <!-- Profile Completeness -->
+                        <div class="dashboard-panel">
+                            <div class="panel-header" style="border-bottom: none; padding-bottom: 0;">
+                                <h3>Profile Completeness</h3>
+                                <span class="badge badge-primary">85% Complete</span>
+                            </div>
+                            <div class="progress-container">
+                                <div class="progress-bar success" data-width="85%" style="width: 85%;"></div>
+                            </div>
+                            <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1.5rem;">Complete your profile to get 2x more views from premium hiring managers.</p>
+                            <div class="flex" style="gap: 1rem; flex-wrap: wrap;">
+                                <button class="btn btn-secondary" style="font-size: 0.8rem; padding: 0.4rem 1rem;"><i class="fas fa-file-pdf"></i> Upload Cover Letter</button>
+                                <button class="btn btn-secondary" style="font-size: 0.8rem; padding: 0.4rem 1rem;"><i class="fas fa-link"></i> Add Portfolio Link</button>
+                            </div>
+                        </div>
+
+                        <!-- Activity Chart -->
+                        <div class="dashboard-panel">
+                            <div class="panel-header">
+                                <h3>Weekly Activity Overview</h3>
+                            </div>
+                            <div class="chart-container">
+                                <div class="chart-bar-wrapper"><div class="chart-bar" data-height="30%" style="height: 30%;"></div><span class="chart-label">Mon</span></div>
+                                <div class="chart-bar-wrapper"><div class="chart-bar" data-height="50%" style="height: 50%;"></div><span class="chart-label">Tue</span></div>
+                                <div class="chart-bar-wrapper"><div class="chart-bar active" data-height="90%" style="height: 90%;"></div><span class="chart-label">Wed</span></div>
+                                <div class="chart-bar-wrapper"><div class="chart-bar" data-height="60%" style="height: 60%;"></div><span class="chart-label">Thu</span></div>
+                                <div class="chart-bar-wrapper"><div class="chart-bar" data-height="40%" style="height: 40%;"></div><span class="chart-label">Fri</span></div>
+                                <div class="chart-bar-wrapper"><div class="chart-bar" data-height="20%" style="height: 20%;"></div><span class="chart-label">Sat</span></div>
+                                <div class="chart-bar-wrapper"><div class="chart-bar" data-height="10%" style="height: 10%;"></div><span class="chart-label">Sun</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid" style="gap: 2rem;">
+                        <!-- Recommended Jobs -->
+                        <div class="dashboard-panel">
+                            <div class="panel-header">
+                                <h3>Recommended For You</h3>
+                            </div>
+                            <div style="display: flex; flex-direction: column; gap: 1rem;">
+                                <div class="dash-list-item">
+                                    <div class="company-logo-box" style="width: 40px; height: 40px; flex-shrink: 0;"><i class="fab fa-amazon" style="color: #FF9900; font-size: 1.25rem;"></i></div>
+                                    <div style="flex: 1;">
+                                        <h5 style="font-size: 0.9rem; margin-bottom: 0.1rem;">Cloud DevOps Engineer</h5>
+                                        <p style="font-size: 0.75rem; margin-bottom: 0; color: var(--text-muted);">Amazon Web Services</p>
+                                    </div>
+                                    <button class="btn-action-icon" title="Quick Apply"><i class="fas fa-paper-plane"></i></button>
+                                </div>
+                                <div class="dash-list-item">
+                                    <div class="company-logo-box" style="width: 40px; height: 40px; flex-shrink: 0;"><i class="fab fa-microsoft" style="color: #00A4EF; font-size: 1.25rem;"></i></div>
+                                    <div style="flex: 1;">
+                                        <h5 style="font-size: 0.9rem; margin-bottom: 0.1rem;">Senior Fullstack Developer</h5>
+                                        <p style="font-size: 0.75rem; margin-bottom: 0; color: var(--text-muted);">Microsoft Corp</p>
+                                    </div>
+                                    <button class="btn-action-icon" title="Quick Apply"><i class="fas fa-paper-plane"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ==========================================================================
+               SECTION: MY PROFILE
+               ========================================================================== -->
+            <div id="section-my-profile" class="dashboard-section" style="display: none;">
+                <div class="dashboard-panel">
+                    <h3 style="margin-bottom: 1.5rem;">Edit Professional Details</h3>
+                    <form id="profile-edit-form">
+                        <div class="grid grid-2" style="gap: 1.5rem; margin-bottom: 1.5rem;">
+                            <div class="form-group">
+                                <label for="candidate-name">Full Name</label>
+                                <input type="text" id="candidate-name" class="form-control" value="Jane Doe" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="candidate-title">Professional Title</label>
+                                <input type="text" id="candidate-title" class="form-control" value="Senior Frontend Engineer" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="candidate-phone">Phone Number</label>
+                                <input type="text" id="candidate-phone" class="form-control" value="+1 (555) 902-1200">
+                            </div>
+                            <div class="form-group">
+                                <label for="candidate-location">Location</label>
+                                <input type="text" id="candidate-location" class="form-control" value="San Francisco, CA">
+                            </div>
+                        </div>
+                        <div class="form-group" style="margin-bottom: 1.5rem;">
+                            <label for="candidate-bio">Professional Summary</label>
+                            <textarea id="candidate-bio" class="form-control" rows="4">Highly driven software engineer with 6+ years of specialized experience in React, design systems, and frontend orchestration pipelines. Passionate about performant components and pixel-perfect UIs.</textarea>
+                        </div>
+                        <div class="form-group" style="margin-bottom: 1.5rem;">
+                            <label for="candidate-skills">Skills (Comma-separated)</label>
+                            <input type="text" id="candidate-skills" class="form-control" value="React, TypeScript, Next.js, Redux, TailwindCSS, Webpack">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Save Changes</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- ==========================================================================
+               SECTION: FIND JOBS
+               ========================================================================== -->
+            <div id="section-find-jobs" class="dashboard-section" style="display: none;">
+                <div class="dashboard-panel" style="margin-bottom: 1.5rem;">
+                    <div class="flex" style="gap: 1rem; flex-wrap: wrap;">
+                        <input type="text" placeholder="Search roles, keywords, skills..." class="form-control" style="flex: 1; min-width: 250px;">
+                        <button class="btn btn-primary">Search</button>
+                    </div>
+                </div>
+                
+                <div class="grid grid-2" style="gap: 1.5rem;">
+                    <!-- Job Card 1 -->
+                    <div class="job-card">
+                        <div class="job-card-header">
+                            <div class="company-logo-box"><i class="fab fa-stripe" style="color:#635BFF; font-size:1.5rem;"></i></div>
+                            <span class="badge badge-primary">Remote</span>
+                        </div>
+                        <h4>Senior Frontend Engineer</h4>
+                        <p style="font-size: 0.85rem; color: var(--text-muted); margin: 0.5rem 0;">Stripe Inc. &bull; Dublin, IE &bull; $130K/yr</p>
+                        <p style="font-size: 0.85rem;">Build Stripe's payment billing dashboards using React and TypeScript.</p>
+                        <div class="flex-between" style="margin-top: 1rem;">
+                            <span class="badge" style="background-color: var(--bg-main);">React</span>
+                            <button class="btn btn-primary btn-apply" style="padding: 0.4rem 1rem; font-size: 0.8rem;">Apply</button>
+                        </div>
+                    </div>
+                    <!-- Job Card 2 -->
+                    <div class="job-card">
+                        <div class="job-card-header">
+                            <div class="company-logo-box"><i class="fab fa-apple" style="color:#000000; font-size:1.5rem;"></i></div>
+                            <span class="badge badge-secondary">Full Time</span>
+                        </div>
+                        <h4>Design Systems Specialist</h4>
+                        <p style="font-size: 0.85rem; color: var(--text-muted); margin: 0.5rem 0;">Apple Corp &bull; Cupertino, CA &bull; $160K/yr</p>
+                        <p style="font-size: 0.85rem;">Orchestrate next-generation designs structures for cross-functional Apple web applications.</p>
+                        <div class="flex-between" style="margin-top: 1rem;">
+                            <span class="badge" style="background-color: var(--bg-main);">Figma</span>
+                            <button class="btn btn-primary btn-apply" style="padding: 0.4rem 1rem; font-size: 0.8rem;">Apply</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ==========================================================================
+               SECTION: MY APPLICATIONS
+               ========================================================================== -->
+            <div id="section-my-applications" class="dashboard-section" style="display: none;">
+                <div class="dashboard-panel">
+                    <div class="table-responsive">
+                        <table class="dashboard-table">
+                            <thead>
+                                <tr>
+                                    <th>Job Opportunity</th>
+                                    <th>Company</th>
+                                    <th>Date Applied</th>
+                                    <th>Current Phase</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Senior Cloud Architect</strong></td>
+                                    <td>Google Inc.</td>
+                                    <td>July 4, 2026</td>
+                                    <td><span class="badge badge-secondary">Interviewing</span></td>
+                                    <td><button class="btn btn-secondary" style="padding:0.3rem 0.8rem; font-size:0.75rem;">Timeline</button></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Staff Frontend Engineer</strong></td>
+                                    <td>Stripe Inc.</td>
+                                    <td>June 28, 2026</td>
+                                    <td><span class="badge badge-primary">Reviewing</span></td>
+                                    <td><button class="btn btn-secondary" style="padding:0.3rem 0.8rem; font-size:0.75rem;">Timeline</button></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>UI/UX Designer</strong></td>
+                                    <td>Figma Inc.</td>
+                                    <td>June 15, 2026</td>
+                                    <td><span class="badge badge-success">Offer Received</span></td>
+                                    <td><button class="btn btn-primary" style="padding:0.3rem 0.8rem; font-size:0.75rem; box-shadow:none;">Accept Offer</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ==========================================================================
+               SECTION: INTERVIEWS
+               ========================================================================== -->
+            <div id="section-interviews" class="dashboard-section" style="display: none;">
+                <div class="grid grid-2" style="gap: 2rem;">
+                    <div class="dashboard-panel">
+                        <h3 style="margin-bottom: 1rem;">Upcoming Sessions</h3>
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-marker success"></div>
+                                <div class="timeline-content">
+                                    <span class="timeline-date">Today at 4:00 PM</span>
+                                    <h5>Google Inc. - Technical Screening</h5>
+                                    <p>Interviewer: John Smith (Senior Staff Architect)</p>
+                                    <a href="#" class="btn btn-primary" style="font-size:0.75rem; padding:0.3rem 0.8rem; margin-top:0.5rem;"><i class="fas fa-video"></i> Start Video</a>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-marker warning"></div>
+                                <div class="timeline-content">
+                                    <span class="timeline-date">July 12 at 10:00 AM</span>
+                                    <h5>Stripe Inc. - Systems Design Round</h5>
+                                    <p>Interviewer: Clara Oswald (Staff Engineer)</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="dashboard-panel">
+                        <h3 style="margin-bottom: 1.5rem;">Preparation Advice</h3>
+                        <p style="font-size: 0.9rem; line-height: 1.6;">Before joining meetings, check that your browser has video/audio permissions active. Review Google cloud architectures and system design diagrams in your profile materials.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ==========================================================================
+               SECTION: SAVED JOBS
+               ========================================================================== -->
+            <div id="section-saved-jobs" class="dashboard-section" style="display: none;">
+                <div class="grid grid-2" style="gap: 1.5rem;">
+                    <!-- Saved Card 1 -->
+                    <div class="job-card">
+                        <div class="job-card-header">
+                            <div class="company-logo-box"><i class="fab fa-meta" style="color:#0668E1; font-size:1.5rem;"></i></div>
+                            <span class="badge badge-primary">Remote</span>
+                        </div>
+                        <h4>Product Designer</h4>
+                        <p style="font-size: 0.85rem; color: var(--text-muted); margin: 0.5rem 0;">Meta Corp &bull; Menlo Park, CA &bull; $145K/yr</p>
+                        <button class="btn btn-primary btn-apply" style="width: 100%; margin-top: 1rem;">Apply Now</button>
+                    </div>
+                    <!-- Saved Card 2 -->
+                    <div class="job-card">
+                        <div class="job-card-header">
+                            <div class="company-logo-box"><i class="fab fa-amazon" style="color:#FF9900; font-size:1.5rem;"></i></div>
+                            <span class="badge badge-secondary">Full Time</span>
+                        </div>
+                        <h4>Solutions Architect</h4>
+                        <p style="font-size: 0.85rem; color: var(--text-muted); margin: 0.5rem 0;">Amazon Web Services &bull; Seattle, WA &bull; $155K/yr</p>
+                        <button class="btn btn-primary btn-apply" style="width: 100%; margin-top: 1rem;">Apply Now</button>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+        
+    </div>
+
+    <!-- Scripts -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const toggleBtn = document.querySelector('.dashboard-nav-toggle');
+            const sidebar = document.querySelector('.dashboard-sidebar');
+            const sidebarLinks = document.querySelectorAll('.sidebar-link');
+            const sections = document.querySelectorAll('.dashboard-section');
+            const topbarHeading = document.getElementById('topbar-heading');
+            const topbarSubheading = document.getElementById('topbar-subheading');
+
+            // Responsive Nav Toggle
+            if (toggleBtn && sidebar) {
+                const checkViewport = () => {
+                    if (window.innerWidth <= 991) {
+                        toggleBtn.style.display = 'flex';
+                    } else {
+                        toggleBtn.style.display = 'none';
+                        sidebar.classList.remove('active');
+                    }
+                };
+                checkViewport();
+                window.addEventListener('resize', checkViewport);
+                
+                toggleBtn.addEventListener('click', () => {
+                    sidebar.classList.toggle('active');
+                });
+            }
+
+            // Tab Switching logic
+            sidebarLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    const sectionId = link.getAttribute('data-section');
+                    if (!sectionId) return;
+
+                    // Update Active states in sidebar
+                    sidebarLinks.forEach(l => l.classList.remove('active'));
+                    link.classList.add('active');
+
+                    // Close sidebar on mobile
+                    if (window.innerWidth <= 991 && sidebar) {
+                        sidebar.classList.remove('active');
+                    }
+
+                    // Toggle visibility of sections
+                    sections.forEach(sec => {
+                        sec.style.display = 'none';
+                        sec.classList.remove('active-section');
+                    });
+                    
+                    const activeSection = document.getElementById(`section-${sectionId}`);
+                    if (activeSection) {
+                        activeSection.style.display = 'block';
+                        activeSection.classList.add('active-section');
+                    }
+
+                    // Dynamically update Topbar welcome texts
+                    switch(sectionId) {
+                        case 'dashboard':
+                            topbarHeading.textContent = "Welcome Back, Jane!";
+                            topbarSubheading.textContent = "Here's what's happening with your job search today.";
+                            break;
+                        case 'my-profile':
+                            topbarHeading.textContent = "My Profile Settings";
+                            topbarSubheading.textContent = "Modify your resume, skill tags, and location credentials.";
+                            break;
+                        case 'find-jobs':
+                            topbarHeading.textContent = "Browse Career Openings";
+                            topbarSubheading.textContent = "Search and apply directly to active partner vacancies.";
+                            break;
+                        case 'my-applications':
+                            topbarHeading.textContent = "My Applications History";
+                            topbarSubheading.textContent = "Track ongoing screening processes and hiring funnel positions.";
+                            break;
+                        case 'interviews':
+                            topbarHeading.textContent = "Interviews & Schedules";
+                            topbarSubheading.textContent = "Manage active meetings, online tests, and panel reviews.";
+                            break;
+                        case 'saved-jobs':
+                            topbarHeading.textContent = "Bookmarks & Saved Vacancies";
+                            topbarSubheading.textContent = "Apply later to postings you've bookmarked.";
+                            break;
+                    }
+                });
+            });
+
+            // Form Edit submit
+            const profileForm = document.getElementById('profile-edit-form');
+            if(profileForm) {
+                profileForm.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    const dispName = document.getElementById('profile-display-name');
+                    const candName = document.getElementById('candidate-name').value;
+                    if(dispName && candName) {
+                        dispName.textContent = candName;
+                    }
+                    alert('Profile settings saved successfully!');
+                });
+            }
+        });
+    </script>
+    <script src="js/script.js"></script>
+</body>
+</html>

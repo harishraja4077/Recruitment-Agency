@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Browse high-salary, premium job openings with Stackly Recruitment Agency. Filter by location, sector, and job type.">
+    <title>Find Jobs - Stackly Recruiting Agency</title>
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- ==========================================================================
+       HEADER / NAVIGATION
+       ========================================================================== -->
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="images/logo.webp" alt="Stackly Logo">
+            </a>
+            
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="service.html" class="nav-link">Services</a>
+                <a href="Project.html" class="nav-link active">Find Jobs</a>
+                <a href="Blog.html" class="nav-link">Blog</a>
+                <a href="Contact.html" class="nav-link">Contact</a>
+                <div class="nav-actions">
+                    <a href="signin.html" class="btn btn-secondary">Sign In</a>
+                    <a href="signup.html" class="btn btn-primary">Join Now</a>
+                </div>
+            </nav>
+            
+            <button class="mobile-nav-toggle" aria-label="Toggle Navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- ==========================================================================
+       INNER HERO BANNER
+       ========================================================================== -->
+    <section class="inner-hero">
+        <div class="container">
+            <h1>Find Career Openings</h1>
+            <div class="breadcrumbs">
+                <a href="index.html">Home</a>
+                <i class="fas fa-chevron-right" style="font-size: 0.75rem;"></i>
+                <span>Jobs</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+       JOB BOARD SECTION (SIDEBAR + CONTENT GRID)
+       ========================================================================== -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="grid" style="grid-template-columns: 320px 1fr; gap: 2.5rem; align-items: start;">
+                
+                <!-- Sidebar Filters -->
+                <aside class="job-sidebar reveal reveal-left">
+                    <div class="sidebar-widget">
+                        <h4 class="widget-title">Search Keywords</h4>
+                        <div class="search-input-box">
+                            <input type="text" placeholder="Design, GCP, Manager...">
+                            <i class="fas fa-search"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="sidebar-widget">
+                        <h4 class="widget-title">Job Types</h4>
+                        <div class="filter-list">
+                            <label class="filter-list-item">
+                                <input type="checkbox" checked> Full-Time
+                                <span>12</span>
+                            </label>
+                            <label class="filter-list-item">
+                                <input type="checkbox" checked> Part-Time
+                                <span>5</span>
+                            </label>
+                            <label class="filter-list-item">
+                                <input type="checkbox" checked> Remote / WFH
+                                <span>8</span>
+                            </label>
+                            <label class="filter-list-item">
+                                <input type="checkbox"> Contract
+                                <span>3</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="sidebar-widget">
+                        <h4 class="widget-title">Industry Sector</h4>
+                        <div class="filter-list">
+                            <label class="filter-list-item">
+                                <input type="checkbox" checked> Technology & IT
+                                <span>15</span>
+                            </label>
+                            <label class="filter-list-item">
+                                <input type="checkbox"> Finance & Banking
+                                <span>8</span>
+                            </label>
+                            <label class="filter-list-item">
+                                <input type="checkbox"> Healthcare & Biotech
+                                <span>4</span>
+                            </label>
+                            <label class="filter-list-item">
+                                <input type="checkbox"> Creative & Marketing
+                                <span>6</span>
+                            </label>
+                            <label class="filter-list-item">
+                                <input type="checkbox"> Engineering
+                                <span>5</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="sidebar-widget">
+                        <h4 class="widget-title">Locations</h4>
+                        <div class="filter-list">
+                            <label class="filter-list-item">
+                                <input type="checkbox" checked> Remote (Worldwide)
+                                <span>9</span>
+                            </label>
+                            <label class="filter-list-item">
+                                <input type="checkbox"> London, UK
+                                <span>3</span>
+                            </label>
+                            <label class="filter-list-item">
+                                <input type="checkbox"> San Francisco, US
+                                <span>4</span>
+                            </label>
+                            <label class="filter-list-item">
+                                <input type="checkbox"> Dublin, IE
+                                <span>2</span>
+                            </label>
+                        </div>
+                    </div>
+                </aside>
+
+                <!-- Job Listings -->
+                <main class="reveal reveal-right">
+                    
+                    <!-- Listings Header Top Bar -->
+                    <div class="flex-between" style="background-color: var(--bg-card); padding: 1rem 1.5rem; border: 1px solid var(--border-color); border-radius: var(--radius-sm); margin-bottom: 2rem; box-shadow: var(--shadow-sm);">
+                        <p style="margin-bottom: 0; font-weight: 600; color: var(--text-main);">Showing 6 Openings</p>
+                        <div class="flex">
+                            <span style="font-size: 0.9rem; color: var(--text-muted);">Sort By:</span>
+                            <select style="font-size: 0.9rem; font-weight: 600; color: var(--text-main); border: 1px solid var(--border-color); border-radius: 4px; padding: 0.25rem 0.5rem; background-color: var(--bg-main); cursor: pointer;">
+                                <option>Most Recent</option>
+                                <option>High Salary</option>
+                                <option>Job Type</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <!-- Job Grid -->
+                    <div class="grid grid-2">
+                        <!-- Card 1 -->
+                        <div class="job-card" data-category="tech">
+                            <div>
+                                <div class="job-card-header">
+                                    <div class="company-logo-box">
+                                        <i class="fab fa-google" style="color: #4285F4; font-size: 1.5rem;"></i>
+                                    </div>
+                                    <button class="bookmark-btn" aria-label="Bookmark job">
+                                        <i class="far fa-bookmark"></i>
+                                    </button>
+                                </div>
+                                <div class="job-details">
+                                    <span class="badge badge-primary">Full Time</span>
+                                    <h4 style="margin-top: 0.5rem;"><a href="#">Senior Cloud Architect</a></h4>
+                                    <div class="company-meta">
+                                        <span>Google Inc.</span>
+                                        <span>&bull;</span>
+                                        <span><i class="fas fa-map-marker-alt"></i> Remote (US)</span>
+                                    </div>
+                                </div>
+                                <p style="font-size: 0.85rem; margin-top: 0.5rem;">Lead the migration of high-volume financial transactions into secure multi-region hybrid GCP environments.</p>
+                                <div class="job-tags">
+                                    <span class="badge" style="background-color: var(--bg-main);">Kubernetes</span>
+                                    <span class="badge" style="background-color: var(--bg-main);">GCP</span>
+                                </div>
+                            </div>
+                            <div class="job-card-footer">
+                                <div class="job-salary">$140K <span>/yr</span></div>
+                                <button class="btn btn-primary btn-apply" style="padding: 0.5rem 1.25rem; font-size: 0.85rem;">Apply Now</button>
+                            </div>
+                        </div>
+
+                        <!-- Card 2 -->
+                        <div class="job-card" data-category="tech">
+                            <div>
+                                <div class="job-card-header">
+                                    <div class="company-logo-box">
+                                        <i class="fab fa-stripe" style="color: #635BFF; font-size: 1.75rem;"></i>
+                                    </div>
+                                    <button class="bookmark-btn" aria-label="Bookmark job">
+                                        <i class="far fa-bookmark"></i>
+                                    </button>
+                                </div>
+                                <div class="job-details">
+                                    <span class="badge badge-secondary">Remote</span>
+                                    <h4 style="margin-top: 0.5rem;"><a href="#">Staff Frontend Engineer</a></h4>
+                                    <div class="company-meta">
+                                        <span>Stripe Inc.</span>
+                                        <span>&bull;</span>
+                                        <span><i class="fas fa-map-marker-alt"></i> Dublin, IE</span>
+                                    </div>
+                                </div>
+                                <p style="font-size: 0.85rem; margin-top: 0.5rem;">Architect high-performance UI libraries using React, TypeScript, and micro-frontends supporting global gateways.</p>
+                                <div class="job-tags">
+                                    <span class="badge" style="background-color: var(--bg-main);">React</span>
+                                    <span class="badge" style="background-color: var(--bg-main);">TypeScript</span>
+                                </div>
+                            </div>
+                            <div class="job-card-footer">
+                                <div class="job-salary">$125K <span>/yr</span></div>
+                                <button class="btn btn-primary btn-apply" style="padding: 0.5rem 1.25rem; font-size: 0.85rem;">Apply Now</button>
+                            </div>
+                        </div>
+
+                        <!-- Card 3 -->
+                        <div class="job-card" data-category="finance">
+                            <div>
+                                <div class="job-card-header">
+                                    <div class="company-logo-box">
+                                        <i class="fas fa-building-columns" style="color: #002D62; font-size: 1.5rem;"></i>
+                                    </div>
+                                    <button class="bookmark-btn" aria-label="Bookmark job">
+                                        <i class="far fa-bookmark"></i>
+                                    </button>
+                                </div>
+                                <div class="job-details">
+                                    <span class="badge badge-primary">Full Time</span>
+                                    <h4 style="margin-top: 0.5rem;"><a href="#">Investment Portfolio Manager</a></h4>
+                                    <div class="company-meta">
+                                        <span>Apex Capital</span>
+                                        <span>&bull;</span>
+                                        <span><i class="fas fa-map-marker-alt"></i> London, UK</span>
+                                    </div>
+                                </div>
+                                <p style="font-size: 0.85rem; margin-top: 0.5rem;">Manage secondary-market equity funds exceeding $80M in value. Direct valuations, strategies and modeling.</p>
+                                <div class="job-tags">
+                                    <span class="badge" style="background-color: var(--bg-main);">Portfolio</span>
+                                    <span class="badge" style="background-color: var(--bg-main);">Equity</span>
+                                </div>
+                            </div>
+                            <div class="job-card-footer">
+                                <div class="job-salary">$110K <span>/yr</span></div>
+                                <button class="btn btn-primary btn-apply" style="padding: 0.5rem 1.25rem; font-size: 0.85rem;">Apply Now</button>
+                            </div>
+                        </div>
+
+                        <!-- Card 4 -->
+                        <div class="job-card" data-category="marketing">
+                            <div>
+                                <div class="job-card-header">
+                                    <div class="company-logo-box">
+                                        <i class="fab fa-shopify" style="color: #96bf48; font-size: 1.5rem;"></i>
+                                    </div>
+                                    <button class="bookmark-btn" aria-label="Bookmark job">
+                                        <i class="far fa-bookmark"></i>
+                                    </button>
+                                </div>
+                                <div class="job-details">
+                                    <span class="badge badge-warning">Part Time</span>
+                                    <h4 style="margin-top: 0.5rem;"><a href="#">Senior Growth Marketer</a></h4>
+                                    <div class="company-meta">
+                                        <span>Shopify Corp</span>
+                                        <span>&bull;</span>
+                                        <span><i class="fas fa-map-marker-alt"></i> Toronto, CA</span>
+                                    </div>
+                                </div>
+                                <p style="font-size: 0.85rem; margin-top: 0.5rem;">Supervise performance marketing budgets across search engines and paid socials to secure new retail vendors.</p>
+                                <div class="job-tags">
+                                    <span class="badge" style="background-color: var(--bg-main);">Growth</span>
+                                    <span class="badge" style="background-color: var(--bg-main);">AdWords</span>
+                                </div>
+                            </div>
+                            <div class="job-card-footer">
+                                <div class="job-salary">$85K <span>/yr</span></div>
+                                <button class="btn btn-primary btn-apply" style="padding: 0.5rem 1.25rem; font-size: 0.85rem;">Apply Now</button>
+                            </div>
+                        </div>
+
+                        <!-- Card 5 -->
+                        <div class="job-card" data-category="finance">
+                            <div>
+                                <div class="job-card-header">
+                                    <div class="company-logo-box">
+                                        <i class="fab fa-paypal" style="color: #003087; font-size: 1.5rem;"></i>
+                                    </div>
+                                    <button class="bookmark-btn" aria-label="Bookmark job">
+                                        <i class="far fa-bookmark"></i>
+                                    </button>
+                                </div>
+                                <div class="job-details">
+                                    <span class="badge badge-primary">Full Time</span>
+                                    <h4 style="margin-top: 0.5rem;"><a href="#">Senior Corporate Controller</a></h4>
+                                    <div class="company-meta">
+                                        <span>PayPal Holding</span>
+                                        <span>&bull;</span>
+                                        <span><i class="fas fa-map-marker-alt"></i> San Jose, CA</span>
+                                    </div>
+                                </div>
+                                <p style="font-size: 0.85rem; margin-top: 0.5rem;">Oversee internal tax audits, legal fiscal filings, and Sox compliance structures across our SaaS lines.</p>
+                                <div class="job-tags">
+                                    <span class="badge" style="background-color: var(--bg-main);">IFRS</span>
+                                    <span class="badge" style="background-color: var(--bg-main);">Sox</span>
+                                </div>
+                            </div>
+                            <div class="job-card-footer">
+                                <div class="job-salary">$115K <span>/yr</span></div>
+                                <button class="btn btn-primary btn-apply" style="padding: 0.5rem 1.25rem; font-size: 0.85rem;">Apply Now</button>
+                            </div>
+                        </div>
+
+                        <!-- Card 6 -->
+                        <div class="job-card" data-category="marketing">
+                            <div>
+                                <div class="job-card-header">
+                                    <div class="company-logo-box">
+                                        <i class="fab fa-spotify" style="color: #1DB954; font-size: 1.5rem;"></i>
+                                    </div>
+                                    <button class="bookmark-btn" aria-label="Bookmark job">
+                                        <i class="far fa-bookmark"></i>
+                                    </button>
+                                </div>
+                                <div class="job-details">
+                                    <span class="badge badge-secondary">Remote</span>
+                                    <h4 style="margin-top: 0.5rem;"><a href="#">Director of Creative Brand</a></h4>
+                                    <div class="company-meta">
+                                        <span>Spotify AB</span>
+                                        <span>&bull;</span>
+                                        <span><i class="fas fa-map-marker-alt"></i> Stockholm, SE</span>
+                                    </div>
+                                </div>
+                                <p style="font-size: 0.85rem; margin-top: 0.5rem;">Establish creative marketing benchmarks for global music and audio streaming launch campaigns.</p>
+                                <div class="job-tags">
+                                    <span class="badge" style="background-color: var(--bg-main);">Strategy</span>
+                                    <span class="badge" style="background-color: var(--bg-main);">Brand</span>
+                                </div>
+                            </div>
+                            <div class="job-card-footer">
+                                <div class="job-salary">$135K <span>/yr</span></div>
+                                <button class="btn btn-primary btn-apply" style="padding: 0.5rem 1.25rem; font-size: 0.85rem;">Apply Now</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pagination -->
+                    <div class="pagination">
+                        <a href="#" class="pagination-item"><i class="fas fa-chevron-left"></i></a>
+                        <a href="#" class="pagination-item active">1</a>
+                        <a href="#" class="pagination-item">2</a>
+                        <a href="#" class="pagination-item">3</a>
+                        <a href="#" class="pagination-item"><i class="fas fa-chevron-right"></i></a>
+                    </div>
+
+                </main>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+       FOOTER
+       ========================================================================== -->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="footer-grid">
+                    <!-- Column 1: Info -->
+                    <div>
+                        <a href="index.html" class="footer-logo">
+                            <img src="images/logo.webp" alt="Stackly Logo">
+                        </a>
+                        <p class="footer-desc">Stackly is a premier global staffing and recruiting agency. We bridge the talent-opportunity gap through cutting-edge assessment tools and dedicated specialists.</p>
+                        <div class="footer-socials">
+                            <a href="404.html" aria-label="Follow us on LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="404.html" aria-label="Follow us on Twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="404.html" aria-label="Follow us on Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="404.html" aria-label="Follow us on Instagram"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    <!-- Column 2: Quick Links -->
+                     <div>
+                        <h4 class="footer-title">Quick Links</h4>
+                        <div class="footer-links">
+                            <a href="index.html">Home</a>
+                            <a href="service.html">Service</a>
+                            <a href="Project.html">Jobs</a>
+                            <a href="Blog.html">Blog</a>
+                            <a href="Contact.html">Contact</a>
+                        </div>
+                    </div>
+
+
+                    <div>
+                        <h4 class="footer-title">For Candidates</h4>
+                        <div class="footer-links">
+                            <a href="Project.html">Explore Openings</a>
+                            <a href="signup.html">Create Profile</a>
+                            <a href="service.html">Candidate Services</a>
+                            <a href="Blog.html">Career Advice Blog</a>
+                        </div>
+                    </div>
+                    <!-- Column 3: Quick Links -->
+                    <div>
+                        <h4 class="footer-title">For Employers</h4>
+                        <div class="footer-links">
+                            <a href="signup.html">Post a Job</a>
+                            <a href="service.html">Our Recruitment Services</a>
+                            <a href="Contact.html">Request Consultation</a>
+                            <a href="signin.html">Employer Portal</a>
+                        </div>
+                    </div>
+                    <!-- Column 4: Contact Us -->
+                    <div>
+                        <h4 class="footer-title">Contact Us</h4>
+                        <div class="footer-contact-list">
+                            <div class="footer-contact-item">
+                                <div class="footer-contact-icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div class="footer-contact-text">
+                                    <p>MMR Complex, Chinna Thirupathi, near Chinna Muniyappan Kovil, Salem, Tamil Nadu 636008</p>
+                                </div>
+                            </div>
+                            <div class="footer-contact-item">
+                                <div class="footer-contact-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="footer-contact-text">
+                                    <a href="mailto:info@thestackly.com">info@thestackly.com</a>
+                                    <a href="mailto:thestackly@gmail.com">thestackly@gmail.com</a>
+                                </div>
+                            </div>
+                            <div class="footer-contact-item">
+                                <div class="footer-contact-icon">
+                                    <i class="fas fa-phone-alt"></i>
+                                </div>
+                                <div class="footer-contact-text">
+                                    <a href="tel:+917010792745">+91 70107 92745</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Column 5: Newsletter -->
+                    <div>
+                        <h4 class="footer-title">Stay Connected</h4>
+                        <p class="footer-desc" style="margin-bottom: 1rem;">Subscribe to our weekly newsletter for the latest hiring reports and job listings.</p>
+                        <form id="newsletter-form" class="newsletter-form">
+                            <div class="newsletter-input-group">
+                                <input type="email" placeholder="Your Email Address" required>
+                                <button type="submit" class="btn btn-primary" style="border-radius: var(--radius-sm);">Go</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="container flex-between">
+                <p>&copy; 2026 Stackly Recruitment Agency. All Rights Reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="404.html">Privacy Policy</a>
+                    <a href="404.html">Terms & Conditions</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Script file -->
+    <script src="js/script.js"></script>
+</body>
+</html>

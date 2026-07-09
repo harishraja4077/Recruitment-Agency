@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Stackly - Professional Staffing & Recruiting Agency. We connect top talent with industry-leading companies. Discover jobs or hire elite professionals.">
+    <title>Stackly - Premium Staffing & Recruiting Agency</title>
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- ==========================================================================
+       HEADER / NAVIGATION
+       ========================================================================== -->
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="images/logo.webp" alt="Stackly Logo">
+            </a>
+            
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-link active">Home</a>
+                <a href="service.html" class="nav-link">Services</a>
+                <a href="Project.html" class="nav-link">Find Jobs</a>
+                <a href="Blog.html" class="nav-link">Blog</a>
+                <a href="Contact.html" class="nav-link">Contact</a>
+                <div class="nav-actions">
+                    <a href="signin.html" class="btn btn-secondary">Sign In</a>
+                    <a href="signup.html" class="btn btn-primary">Join Now</a>
+                </div>
+            </nav>
+            
+            <button class="mobile-nav-toggle" aria-label="Toggle Navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- ==========================================================================
+       HERO SECTION
+       ========================================================================== -->
+    <section class="hero">
+        <div class="container">
+            <div class="grid grid-2" style="align-items: center;">
+                <div class="hero-content reveal reveal-left">
+                    <div class="hero-badge">
+                        <span></span> Trusted by 300+ Global Partners
+                    </div>
+                    <h1 class="hero-title">Connecting Elite <span class="gradient-text">Talent</span> with Elite <span class="gradient-text">Brands</span></h1>
+                    <p class="hero-desc">Stackly is an industry-leading recruitment agency that matches world-class talent with pioneering companies. Your professional growth is our business growth.</p>
+                    
+                    <!-- Search Widget -->
+                    <form action="Project.html" class="search-widget">
+                        <div class="search-input-group">
+                            <i class="fas fa-search"></i>
+                            <input type="text" placeholder="Job Title, Skills..." name="search" required>
+                        </div>
+                        <div class="search-input-group">
+                            <i class="fas fa-briefcase"></i>
+                            <select name="category">
+                                <option value="all">All Sectors</option>
+                                <option value="tech">Technology</option>
+                                <option value="finance">Finance</option>
+                                <option value="creative">Creative</option>
+                                <option value="healthcare">Healthcare</option>
+                            </select>
+                        </div>
+                        <div class="search-input-group">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <input type="text" placeholder="City or Remote" name="location">
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-icon" aria-label="Search Jobs">
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </form>
+                </div>
+                
+                <div class="hero-image-wrapper reveal reveal-right">
+                    <img src="images/home1.webp" alt="Recruitment Expert Stackly" class="hero-image">
+                    
+                    <!-- Floating Cards -->
+                    <div class="floating-card floating-card-1">
+                        <div class="floating-icon">
+                            <i class="fas fa-check"></i>
+                        </div>
+                        <div class="floating-info">
+                            <h5>98% Placement</h5>
+                            <p>Success Match Rate</p>
+                        </div>
+                    </div>
+                    
+                    <div class="floating-card floating-card-2">
+                        <div class="floating-icon" style="background-color: var(--secondary-light); color: var(--secondary);">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="floating-info">
+                            <h5>15K+ Placed</h5>
+                            <p>Global Candidates</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+       STATS SECTION
+       ========================================================================== -->
+    <section class="container" style="position: relative; z-index: 10;">
+        <div class="stats-bar reveal reveal-up">
+            <div class="grid grid-4">
+                <div class="stat-item">
+                    <div class="stat-num" data-target="15" data-suffix="K+">0</div>
+                    <div class="stat-label">Jobs Completed</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-num" data-target="99" data-suffix="%">0</div>
+                    <div class="stat-label">Client Retention</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-num" data-target="350" data-suffix="+">0</div>
+                    <div class="stat-label">Global Corporates</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-num" data-target="12" data-suffix=" Yrs">0</div>
+                    <div class="stat-label">Market Excellence</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+       ABOUT US SECTION
+       ========================================================================== -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="grid grid-2" style="align-items: center;">
+                <div class="about-image-grid reveal reveal-left">
+                    <img src="images/home2.webp" alt="Team meeting at Stackly" class="about-img-1">
+
+                    <div class="about-badge">
+                        <h4>12+</h4>
+                        <p>Years Experience</p>
+                    </div>
+                </div>
+                
+                <div class="about-content reveal reveal-right">
+                    <span class="section-subtitle">About Our Agency</span>
+                    <h2 class="section-title">We Deliver the Future of Hiring Solutions Today</h2>
+                    <p>Stackly bridges the gap between ambitious enterprises and exceptional individuals. We understand that finding the right match is not just about skills on paper, but cultural alignment, shared vision, and long-term synergy.</p>
+                    
+                    <div class="about-list">
+                        <div class="about-list-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <p>Deep Market Intelligence & Research</p>
+                            </div>
+                        </div>
+                        <div class="about-list-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <p>Rigorous Multi-Stage Candidate Vetting</p>
+                            </div>
+                        </div>
+                        <div class="about-list-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <p>Fast-track Placement Processes</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="service.html" class="btn btn-primary">Our Services <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+       SERVICE CATEGORIES (Sectors)
+       ========================================================================== -->
+    <section class="section-padding" style="background-color: var(--bg-card);">
+        <div class="container">
+            <div class="section-header text-center reveal reveal-up">
+                <span class="section-subtitle">Sectors We Serve</span>
+                <h2 class="section-title">Specialized Staffing Across Industries</h2>
+                <p>We have dedicated recruitment specialists operating within specific verticals to ensure deep expertise and precise screening.</p>
+            </div>
+            
+            <div class="grid grid-3">
+                <!-- Card 1 -->
+                <div class="service-card reveal reveal-up">
+                    <div class="service-icon-box">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3>Technology & IT</h3>
+                    <p>From Senior Developers to CTOs, we recruit experts leading the digital revolution in SaaS, AI, and Cybersecurity.</p>
+                    <a href="service.html" class="read-more-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <!-- Card 2 -->
+                <div class="service-card reveal reveal-up" style="animation-delay: 0.1s;">
+                    <div class="service-icon-box" style="background-color: var(--secondary-light); color: var(--secondary);">
+                        <i class="fas fa-coins"></i>
+                    </div>
+                    <h3>Finance & Banking</h3>
+                    <p>Securing elite controllers, investment bankers, tax experts, and CFOs who ensure corporate fiscal stability.</p>
+                    <a href="service.html" class="read-more-link" style="color: var(--secondary);">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <!-- Card 3 -->
+                <div class="service-card reveal reveal-up" style="animation-delay: 0.2s;">
+                    <div class="service-icon-box" style="background-color: rgba(245, 158, 11, 0.1); color: var(--accent);">
+                        <i class="fas fa-user-md"></i>
+                    </div>
+                    <h3>Healthcare & Biotech</h3>
+                    <p>Supplying certified practitioners, nursing staff, clinical researchers, and pharmaceutical heads globally.</p>
+                    <a href="service.html" class="read-more-link" style="color: var(--accent);">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <!-- Card 4 -->
+                <div class="service-card reveal reveal-up">
+                    <div class="service-icon-box" style="background-color: rgba(16, 185, 129, 0.1); color: #10b981;">
+                        <i class="fas fa-bullhorn"></i>
+                    </div>
+                    <h3>Marketing & Sales</h3>
+                    <p>Providing creative directors, SEO leaders, growth marketers, and global sales heads to boost revenues.</p>
+                    <a href="service.html" class="read-more-link" style="color: #10b981;">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <!-- Card 5 -->
+                <div class="service-card reveal reveal-up" style="animation-delay: 0.1s;">
+                    <div class="service-icon-box" style="background-color: rgba(139, 92, 246, 0.1); color: #8b5cf6;">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3>Engineering</h3>
+                    <p>Supplying hardware, mechanical, civil, and electrical engineers specializing in infrastructure development.</p>
+                    <a href="service.html" class="read-more-link" style="color: #8b5cf6;">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <!-- Card 6 -->
+                <div class="service-card reveal reveal-up" style="animation-delay: 0.2s;">
+                    <div class="service-icon-box" style="background-color: rgba(239, 68, 68, 0.1); color: #ef4444;">
+                        <i class="fas fa-balance-scale"></i>
+                    </div>
+                    <h3>HR & Legal Operations</h3>
+                    <p>Helping you construct compliant HR divisions and sourcing skilled legal counsels for risk management.</p>
+                    <a href="service.html" class="read-more-link" style="color: #ef4444;">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+       HOW IT WORKS SECTION
+       ========================================================================== -->
+    <section class="section-padding process-section">
+        <div class="container">
+            <div class="section-header text-center reveal reveal-up">
+                <span class="section-subtitle" style="color: var(--secondary); background-color: var(--secondary-light)">Hiring Process</span>
+                <h2 class="section-title">Simple Steps to Success</h2>
+                <p style="color: var(--text-muted-dark)">How Stackly delivers exceptional recruitment experiences for candidates and employers alike.</p>
+            </div>
+            
+            <div class="process-step-container">
+                <div class="process-step-line"></div>
+                <div class="grid grid-4">
+                    <!-- Step 1 -->
+                    <div class="process-step reveal reveal-up">
+                        <div class="process-step-num">01</div>
+                        <h3>Create Profile</h3>
+                        <p>Sign up as a Candidate or Employer and set your preferences.</p>
+                    </div>
+                    <!-- Step 2 -->
+                    <div class="process-step reveal reveal-up" style="animation-delay: 0.15s;">
+                        <div class="process-step-num" style="background: linear-gradient(135deg, #06b6d4 0%, #4f46e5 100%);">02</div>
+                        <h3>Upload details</h3>
+                        <p>Submit your Resume or post a detailed job opening description.</p>
+                    </div>
+                    <!-- Step 3 -->
+                    <div class="process-step reveal reveal-up" style="animation-delay: 0.3s;">
+                        <div class="process-step-num">03</div>
+                        <h3>Smart Matching</h3>
+                        <p>Our expert recruiters and AI filters match skills, culture, and goals.</p>
+                    </div>
+                    <!-- Step 4 -->
+                    <div class="process-step reveal reveal-up" style="animation-delay: 0.45s;">
+                        <div class="process-step-num" style="background: linear-gradient(135deg, #06b6d4 0%, #4f46e5 100%);">04</div>
+                        <h3>Hiring Done</h3>
+                        <p>Conclude smooth interview rounds and finalize the placement.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+       FEATURED JOBS (PROJECTS) SECTION
+       ========================================================================== -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="section-header text-center reveal reveal-up">
+                <span class="section-subtitle">Job Board</span>
+                <h2 class="section-title">Current Career Openings</h2>
+                <p>Browse through high-salary openings at leading brands. Filter and apply instantly with Stackly.</p>
+            </div>
+            
+            <!-- Filters -->
+            <div class="filter-tabs reveal reveal-up">
+                <button class="filter-btn active" data-filter="all">All Jobs</button>
+                <button class="filter-btn" data-filter="tech">Technology</button>
+                <button class="filter-btn" data-filter="finance">Finance</button>
+                <button class="filter-btn" data-filter="marketing">Marketing</button>
+            </div>
+            
+            <!-- Jobs Grid -->
+            <div class="grid grid-3">
+                <!-- Job Card 1 -->
+                <div class="job-card reveal reveal-up" data-category="tech">
+                    <div>
+                        <div class="job-card-header">
+                            <div class="company-logo-box">
+                                <i class="fab fa-google" style="color: #4285F4; font-size: 1.5rem;"></i>
+                            </div>
+                            <button class="bookmark-btn" aria-label="Bookmark job">
+                                <i class="far fa-bookmark"></i>
+                            </button>
+                        </div>
+                        <div class="job-details">
+                            <span class="badge badge-primary">Full Time</span>
+                            <h4 style="margin-top: 0.5rem;"><a href="Project.html">Senior Cloud Architect</a></h4>
+                            <div class="company-meta">
+                                <span>Google Inc.</span>
+                                <span>&bull;</span>
+                                <span><i class="fas fa-map-marker-alt"></i> Remote (US)</span>
+                            </div>
+                        </div>
+                        <div class="job-tags">
+                            <span class="badge" style="background-color: var(--bg-main);">Kubernetes</span>
+                            <span class="badge" style="background-color: var(--bg-main);">GCP</span>
+                            <span class="badge" style="background-color: var(--bg-main);">Terraform</span>
+                        </div>
+                    </div>
+                    <div class="job-card-footer">
+                        <div class="job-salary">$140K <span>/yr</span></div>
+                        <button class="btn btn-primary btn-apply" style="padding: 0.5rem 1.25rem; font-size: 0.85rem;">Apply</button>
+                    </div>
+                </div>
+
+                <!-- Job Card 2 -->
+                <div class="job-card reveal reveal-up" data-category="tech" style="animation-delay: 0.1s;">
+                    <div>
+                        <div class="job-card-header">
+                            <div class="company-logo-box">
+                                <i class="fab fa-stripe" style="color: #635BFF; font-size: 1.75rem;"></i>
+                            </div>
+                            <button class="bookmark-btn" aria-label="Bookmark job">
+                                <i class="far fa-bookmark"></i>
+                            </button>
+                        </div>
+                        <div class="job-details">
+                            <span class="badge badge-secondary">Remote</span>
+                            <h4 style="margin-top: 0.5rem;"><a href="Project.html">Staff Frontend Engineer</a></h4>
+                            <div class="company-meta">
+                                <span>Stripe Inc.</span>
+                                <span>&bull;</span>
+                                <span><i class="fas fa-map-marker-alt"></i> Dublin, IE</span>
+                            </div>
+                        </div>
+                        <div class="job-tags">
+                            <span class="badge" style="background-color: var(--bg-main);">React</span>
+                            <span class="badge" style="background-color: var(--bg-main);">TypeScript</span>
+                            <span class="badge" style="background-color: var(--bg-main);">NextJS</span>
+                        </div>
+                    </div>
+                    <div class="job-card-footer">
+                        <div class="job-salary">$125K <span>/yr</span></div>
+                        <button class="btn btn-primary btn-apply" style="padding: 0.5rem 1.25rem; font-size: 0.85rem;">Apply</button>
+                    </div>
+                </div>
+
+                <!-- Job Card 3 -->
+                <div class="job-card reveal reveal-up" data-category="finance" style="animation-delay: 0.2s;">
+                    <div>
+                        <div class="job-card-header">
+                            <div class="company-logo-box">
+                                <i class="fas fa-building-columns" style="color: #002D62; font-size: 1.5rem;"></i>
+                            </div>
+                            <button class="bookmark-btn" aria-label="Bookmark job">
+                                <i class="far fa-bookmark"></i>
+                            </button>
+                        </div>
+                        <div class="job-details">
+                            <span class="badge badge-primary">Full Time</span>
+                            <h4 style="margin-top: 0.5rem;"><a href="Project.html">Investment Portfolio Manager</a></h4>
+                            <div class="company-meta">
+                                <span>Apex Capital</span>
+                                <span>&bull;</span>
+                                <span><i class="fas fa-map-marker-alt"></i> London, UK</span>
+                            </div>
+                        </div>
+                        <div class="job-tags">
+                            <span class="badge" style="background-color: var(--bg-main);">Portfolio</span>
+                            <span class="badge" style="background-color: var(--bg-main);">Valuation</span>
+                            <span class="badge" style="background-color: var(--bg-main);">Equity</span>
+                        </div>
+                    </div>
+                    <div class="job-card-footer">
+                        <div class="job-salary">$110K <span>/yr</span></div>
+                        <button class="btn btn-primary btn-apply" style="padding: 0.5rem 1.25rem; font-size: 0.85rem;">Apply</button>
+                    </div>
+                </div>
+
+                <!-- Job Card 4 -->
+                <div class="job-card reveal reveal-up" data-category="marketing">
+                    <div>
+                        <div class="job-card-header">
+                            <div class="company-logo-box">
+                                <i class="fab fa-shopify" style="color: #96bf48; font-size: 1.5rem;"></i>
+                            </div>
+                            <button class="bookmark-btn" aria-label="Bookmark job">
+                                <i class="far fa-bookmark"></i>
+                            </button>
+                        </div>
+                        <div class="job-details">
+                            <span class="badge badge-warning">Part Time</span>
+                            <h4 style="margin-top: 0.5rem;"><a href="Project.html">Senior Growth Marketer</a></h4>
+                            <div class="company-meta">
+                                <span>Shopify Corp</span>
+                                <span>&bull;</span>
+                                <span><i class="fas fa-map-marker-alt"></i> Toronto, CA</span>
+                            </div>
+                        </div>
+                        <div class="job-tags">
+                            <span class="badge" style="background-color: var(--bg-main);">Growth</span>
+                            <span class="badge" style="background-color: var(--bg-main);">AdWords</span>
+                            <span class="badge" style="background-color: var(--bg-main);">Analytics</span>
+                        </div>
+                    </div>
+                    <div class="job-card-footer">
+                        <div class="job-salary">$85K <span>/yr</span></div>
+                        <button class="btn btn-primary btn-apply" style="padding: 0.5rem 1.25rem; font-size: 0.85rem;">Apply</button>
+                    </div>
+                </div>
+
+                <!-- Job Card 5 -->
+                <div class="job-card reveal reveal-up" data-category="finance" style="animation-delay: 0.1s;">
+                    <div>
+                        <div class="job-card-header">
+                            <div class="company-logo-box">
+                                <i class="fab fa-paypal" style="color: #003087; font-size: 1.5rem;"></i>
+                            </div>
+                            <button class="bookmark-btn" aria-label="Bookmark job">
+                                <i class="far fa-bookmark"></i>
+                            </button>
+                        </div>
+                        <div class="job-details">
+                            <span class="badge badge-primary">Full Time</span>
+                            <h4 style="margin-top: 0.5rem;"><a href="Project.html">Senior Corporate Controller</a></h4>
+                            <div class="company-meta">
+                                <span>PayPal Holding</span>
+                                <span>&bull;</span>
+                                <span><i class="fas fa-map-marker-alt"></i> San Jose, CA</span>
+                            </div>
+                        </div>
+                        <div class="job-tags">
+                            <span class="badge" style="background-color: var(--bg-main);">IFRS</span>
+                            <span class="badge" style="background-color: var(--bg-main);">Compliance</span>
+                            <span class="badge" style="background-color: var(--bg-main);">Sox</span>
+                        </div>
+                    </div>
+                    <div class="job-card-footer">
+                        <div class="job-salary">$115K <span>/yr</span></div>
+                        <button class="btn btn-primary btn-apply" style="padding: 0.5rem 1.25rem; font-size: 0.85rem;">Apply</button>
+                    </div>
+                </div>
+
+                <!-- Job Card 6 -->
+                <div class="job-card reveal reveal-up" data-category="marketing" style="animation-delay: 0.2s;">
+                    <div>
+                        <div class="job-card-header">
+                            <div class="company-logo-box">
+                                <i class="fab fa-spotify" style="color: #1DB954; font-size: 1.5rem;"></i>
+                            </div>
+                            <button class="bookmark-btn" aria-label="Bookmark job">
+                                <i class="far fa-bookmark"></i>
+                            </button>
+                        </div>
+                        <div class="job-details">
+                            <span class="badge badge-secondary">Remote</span>
+                            <h4 style="margin-top: 0.5rem;"><a href="Project.html">Director of Creative Brand</a></h4>
+                            <div class="company-meta">
+                                <span>Spotify AB</span>
+                                <span>&bull;</span>
+                                <span><i class="fas fa-map-marker-alt"></i> Stockholm, SE</span>
+                            </div>
+                        </div>
+                        <div class="job-tags">
+                            <span class="badge" style="background-color: var(--bg-main);">Design</span>
+                            <span class="badge" style="background-color: var(--bg-main);">Strategy</span>
+                            <span class="badge" style="background-color: var(--bg-main);">PR</span>
+                        </div>
+                    </div>
+                    <div class="job-card-footer">
+                        <div class="job-salary">$135K <span>/yr</span></div>
+                        <button class="btn btn-primary btn-apply" style="padding: 0.5rem 1.25rem; font-size: 0.85rem;">Apply</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center" style="margin-top: 4rem;">
+                <a href="Project.html" class="btn btn-secondary">View All Openings <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+       TESTIMONIALS SECTION
+       ========================================================================== -->
+    <section class="section-padding" style="background-color: var(--bg-card);">
+        <div class="container">
+            <div class="section-header text-center reveal reveal-up">
+                <span class="section-subtitle">Testimonials</span>
+                <h2 class="section-title">Feedback From Partners</h2>
+                <p>Hear what recruiters, executives, and successful candidates have to say about working with Stackly.</p>
+            </div>
+            
+            <div class="grid grid-3">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card reveal reveal-up">
+                    <i class="fas fa-quote-right testimonial-quote-icon"></i>
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>"Stackly completely streamlined our hiring. We saved over 40 hours of screening time and found our Principal Software Architect within two weeks of posting."</p>
+                    <div class="testimonial-author">
+                        <img src="images/sarah_chen_it.webp" alt="Sarah Connor VP Engineering">
+                        <div class="testimonial-author-info">
+                            <h4>Sarah Connor</h4>
+                            <p>VP of Tech, Optima Corp</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card reveal reveal-up" style="animation-delay: 0.1s;">
+                    <i class="fas fa-quote-right testimonial-quote-icon"></i>
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>"Finding a recruiter that actually understands the complexities of quantitative risk modeling is rare. Stackly's finance team brought us three top-tier candidates."</p>
+                    <div class="testimonial-author">
+                        <img src="images/Marcus Aureliu.webp"alt="Marcus Aurelius CFO">
+                        <div class="testimonial-author-info">
+                            <h4>Marcus Aurelius</h4>
+                            <p>CFO, Capital Trust</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card reveal reveal-up" style="animation-delay: 0.2s;">
+                    <i class="fas fa-quote-right testimonial-quote-icon"></i>
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>"As a candidate, I felt supported throughout. The onboarding and interview preparation provided by Stackly's consultant played a huge role in me landing my dream job."</p>
+                    <div class="testimonial-author">
+                        <img src="images/david_miller_it.webp" alt="David Miller Candidate">
+                        <div class="testimonial-author-info">
+                            <h4>David Miller</h4>
+                            <p>Lead DevOps, Stripe</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+       LATEST BLOGS / NEWS
+       ========================================================================== -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="section-header text-center reveal reveal-up">
+                <span class="section-subtitle">News & Articles</span>
+                <h2 class="section-title">Latest Career Insights</h2>
+                <p>Read trending articles written by our recruitment specialists about building modern teams and advancing in your career.</p>
+            </div>
+            
+            <div class="grid grid-3">
+                <!-- Blog 1 -->
+                <div class="blog-card reveal reveal-up">
+                    <div class="blog-img-box">
+                        <img src="images/home4.webp" alt="Interview tips">
+                        <span class="blog-date-badge">08 JUL</span>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span><i class="far fa-user"></i> By Admin</span>
+                            <span><i class="far fa-comments"></i> 4 Comments</span>
+                        </div>
+                        <h3><a href="Blog.html">How to Ace Your Next Senior Technical Interview</a></h3>
+                        <p>Deep-dive into crucial system design patterns, architectural challenges, and soft skills needed for leadership roles.</p>
+                        <a href="Blog.html" class="read-more-link">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <!-- Blog 2 -->
+                <div class="blog-card reveal reveal-up" style="animation-delay: 0.1s;">
+                    <div class="blog-img-box">
+                        <img src="images/image2.webp" alt="Resume writing">
+                        <span class="blog-date-badge">05 JUL</span>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span><i class="far fa-user"></i> By HR Desk</span>
+                            <span><i class="far fa-comments"></i> 2 Comments</span>
+                        </div>
+                        <h3><a href="Blog.html">Formatting Resumes for ATS Algorithms in 2026</a></h3>
+                        <p>Learn how screening software interprets resumes and how you can optimize keywords to guarantee human recruiter visibility.</p>
+                        <a href="Blog.html" class="read-more-link">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <!-- Blog 3 -->
+                <div class="blog-card reveal reveal-up" style="animation-delay: 0.2s;">
+                    <div class="blog-img-box">
+                        <img src="images/home6.webp" alt="Employer tips">
+                        <span class="blog-date-badge">28 JUN</span>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span><i class="far fa-user"></i> By Recruiter</span>
+                            <span><i class="far fa-comments"></i> 9 Comments</span>
+                        </div>
+                        <h3><a href="Blog.html">Retention Strategies: Keeping Top Talent Happy</a></h3>
+                        <p>Salary isn't the only factor. Discover how autonomy, remote choices, and career progression tracks reduce team turnover.</p>
+                        <a href="Blog.html" class="read-more-link">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+       FOOTER
+       ========================================================================== -->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="footer-grid">
+                    <!-- Column 1: Info -->
+                    <div>
+                        <a href="index.html" class="footer-logo">
+                            <img src="images/logo.webp" alt="Stackly Logo">
+                        </a>
+                        <p class="footer-desc">Stackly is a premier global staffing and recruiting agency. We bridge the talent-opportunity gap through cutting-edge assessment tools and dedicated specialists.</p>
+                        <div class="footer-socials">
+                            <a href="404.html" aria-label="Follow us on LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="404.html" aria-label="Follow us on Twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="404.html" aria-label="Follow us on Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="404.html" aria-label="Follow us on Instagram"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    <!-- Column 2: Quick Links -->
+                     <div>
+                        <h4 class="footer-title">Quick Links</h4>
+                        <div class="footer-links">
+                            <a href="index.html">Home</a>
+                            <a href="service.html">Service</a>
+                            <a href="Project.html">Jobs</a>
+                            <a href="Blog.html">Blog</a>
+                            <a href="Contact.html">Contact</a>
+                        </div>
+                    </div>
+
+
+                    <div>
+                        <h4 class="footer-title">For Candidates</h4>
+                        <div class="footer-links">
+                            <a href="Project.html">Explore Openings</a>
+                            <a href="signup.html">Create Profile</a>
+                            <a href="service.html">Candidate Services</a>
+                            <a href="Blog.html">Career Advice Blog</a>
+                        </div>
+                    </div>
+                    <!-- Column 3: Quick Links -->
+                    <div>
+                        <h4 class="footer-title">For Employers</h4>
+                        <div class="footer-links">
+                            <a href="signup.html">Post a Job</a>
+                            <a href="service.html">Our Recruitment Services</a>
+                            <a href="Contact.html">Request Consultation</a>
+                            <a href="signin.html">Employer Portal</a>
+                        </div>
+                    </div>
+                    <!-- Column 4: Contact Us -->
+                    <div>
+                        <h4 class="footer-title">Contact Us</h4>
+                        <div class="footer-contact-list">
+                            <div class="footer-contact-item">
+                                <div class="footer-contact-icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div class="footer-contact-text">
+                                    <p>MMR Complex, Chinna Thirupathi, near Chinna Muniyappan Kovil, Salem, Tamil Nadu 636008</p>
+                                </div>
+                            </div>
+                            <div class="footer-contact-item">
+                                <div class="footer-contact-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="footer-contact-text">
+                                    <a href="mailto:info@thestackly.com">info@thestackly.com</a>
+                                    <a href="mailto:thestackly@gmail.com">thestackly@gmail.com</a>
+                                </div>
+                            </div>
+                            <div class="footer-contact-item">
+                                <div class="footer-contact-icon">
+                                    <i class="fas fa-phone-alt"></i>
+                                </div>
+                                <div class="footer-contact-text">
+                                    <a href="tel:+917010792745">+91 70107 92745</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Column 5: Newsletter -->
+                    <div>
+                        <h4 class="footer-title">Stay Connected</h4>
+                        <p class="footer-desc" style="margin-bottom: 1rem;">Subscribe to our weekly newsletter for the latest hiring reports and job listings.</p>
+                        <form id="newsletter-form" class="newsletter-form">
+                            <div class="newsletter-input-group">
+                                <input type="email" placeholder="Your Email Address" required>
+                                <button type="submit" class="btn btn-primary" style="border-radius: var(--radius-sm);">Go</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="container flex-between">
+                <p>&copy; 2026 Stackly Recruitment Agency. All Rights Reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="404.html">Privacy Policy</a>
+                    <a href="404.html">Terms & Conditions</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script file -->
+    <script src="js/script.js"></script>
+</body>
+</html>

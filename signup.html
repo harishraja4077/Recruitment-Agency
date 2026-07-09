@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Register an account with Stackly Recruitment Agency. Post jobs or apply to senior positions.">
+    <title>Sign Up - Stackly Recruiting Agency</title>
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="auth-wrapper">
+        
+        <!-- Left Banner Panel -->
+        <div class="auth-banner-panel">
+            <a href="index.html" class="auth-logo">
+                <img src="images/logo.webp" alt="Stackly Logo">
+            </a>
+            
+            <div class="auth-banner-content">
+                <h1>Scale Your Team with Top Global Talent</h1>
+                <p>Post open roles, manage job boards, screen applicants, and coordinate interviews through our centralized, compliant platform.</p>
+            </div>
+            
+            <div>
+                <a href="index.html" style="color: rgba(255,255,255,0.7); font-size: 0.9rem; font-weight: 500;">
+                    <i class="fas fa-arrow-left"></i> Back to Home Page
+                </a>
+            </div>
+        </div>
+
+        <!-- Right Form Panel -->
+        <div class="auth-form-panel">
+            <div class="auth-form-container">
+                
+                <div class="auth-header">
+                    <!-- Mobile Logo -->
+                    <div style="margin-bottom: 1.5rem; text-align: center;" class="mobile-nav-toggle">
+                        <a href="index.html">
+                            <img src="images/logo.webp" alt="Stackly Logo" style="height: 36px; display: inline-block;">
+                        </a>
+                    </div>
+                    <h2>Create Account</h2>
+                    <p style="color: var(--text-muted); font-size: 0.95rem;">Join Stackly <span id="signup-heading-role">as a Candidate</span>.</p>
+                </div>
+
+                <!-- Role Toggle -->
+                <div class="auth-toggle-container">
+                    <button type="button" class="auth-toggle-btn active" data-role="candidate">Candidate</button>
+                    <button type="button" class="auth-toggle-btn" data-role="employer">Employer</button>
+                </div>
+
+                <!-- Social Sign Up -->
+                <div class="social-login-group">
+                    <button type="button" class="btn-social">
+                        <i class="fab fa-google" style="color: #ea4335;"></i> Google
+                    </button>
+                    <button type="button" class="btn-social">
+                        <i class="fab fa-linkedin" style="color: #0a66c2;"></i> LinkedIn
+                    </button>
+                </div>
+
+                <div class="divider-text">or Sign Up with Email</div>
+
+                <!-- Registration Form -->
+                <form id="auth-form">
+                    <div class="form-group">
+                        <label for="signup-name">Full Name</label>
+                        <input type="text" id="signup-name" class="form-control" placeholder="Jane Doe" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="signup-email">Email Address</label>
+                        <input type="email" id="signup-email" class="form-control" placeholder="name@company.com" required>
+                    </div>
+
+                    <!-- Dynamic Company Name Field (Hidden by default, shown when Employer is toggled) -->
+                    <div class="form-group" id="company-field" style="display: none;">
+                        <label for="signup-company">Company Name</label>
+                        <input type="text" id="signup-company" class="form-control" placeholder="Acme Corp">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="signup-password">Password</label>
+                        <input type="password" id="signup-password" class="form-control" placeholder="&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;" required>
+                    </div>
+
+                    <div class="form-group" style="display: flex; align-items: flex-start; gap: 0.5rem; margin-top: 1rem; margin-bottom: 2rem;">
+                        <input type="checkbox" id="terms" required style="width: 16px; height: 16px; margin-top: 0.2rem; accent-color: var(--primary); cursor: pointer;">
+                        <label for="terms" style="margin-bottom: 0; font-size: 0.85rem; color: var(--text-muted); cursor: pointer; line-height: 1.4;">I agree to the Stackly <a href="#" style="color: var(--primary); font-weight: 600;">Terms of Service</a> and <a href="#" style="color: var(--primary); font-weight: 600;">Privacy Policy</a>.</label>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">Create Account</button>
+                </form>
+
+                <div class="auth-footer">
+                    <p style="color: var(--text-muted);">Already have an account? <a href="signin.html">Sign In</a></p>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Script file -->
+    <script src="js/script.js"></script>
+</body>
+</html>
